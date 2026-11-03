@@ -80,6 +80,7 @@ python -m venv .venv && .venv/Scripts/pip install -r requirements.txt
 - `BASETEN_API_KEY`, or `META_API_KEY` together with `GLOSSMAP_BACKEND=meta`
 - `SPEECHMATICS_API_KEY`
 - `PRIVATE_ROOT`, the path to the private prototype
+- optional `STAFF_AUDIO_DIR`, a folder with recorded staff lines `line01..line04.wav`. It enables the video demo player at `/?staffplay=1`: keys 1–4 play a recorded line through the speakers and stream the same audio into the live ASR, so transcription, sign mapping, checks and the avatar all run live. The page shows "Staff speech: pre-recorded audio · Live AI processing". The recordings are not part of this repo.
 
 Tests:
 - `python -m pytest tests` runs the rule checks offline.

@@ -37,3 +37,6 @@ tmp/
 
 # Demo session logs (text + timings only)
 logs/
+
+# Recorded voice (staff demo lines etc.)
+*.wav

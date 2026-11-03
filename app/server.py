@@ -12,6 +12,10 @@ Environment:
     SPEECHMATICS_ENV   optional extra .env file holding SPEECHMATICS_API_KEY (default: the repo's .env)
     GLOSSMAP_BACKEND   open (Muse Spark Open on Baseten, default) | meta (Muse Spark, Meta Model API)
     RECOGNIZER_URL     default http://127.0.0.1:8770
+    STAFF_AUDIO_DIR    optional folder with recorded staff lines line01..line04.wav (16 kHz mono).
+                       Enables the video demo player at /?staffplay=1: the recorded audio goes
+                       through the same live ASR -> glossmap -> avatar path as the microphone.
+                       The recordings are personal voice data and never belong in this repo.
 
 Nothing from the camera or the microphone is stored. The session log
 (logs/*.jsonl, git-ignored) holds only text results and timings.
@@ -58,6 +62,28 @@ def playable_signs():
 
 
 PLAYABLE = playable_signs()
+
+# Demo player: button n plays the n-th staff line of the demo dialogue (eval_demo.CASES[n-1]).
+STAFF_AUDIO_DIR = Path(os.environ["STAFF_AUDIO_DIR"]) if os.environ.get("STAFF_AUDIO_DIR") else None
+STAFF_LINES = 4
+
+
+def staffplay_lines():
+    if not STAFF_AUDIO_DIR:
+        return []
+    from eval_demo import CASES
+    return [{"n": n, "text": CASES[n - 1][0]} for n in range(1, STAFF_LINES + 1)
+            if (STAFF_AUDIO_DIR / f"line{n:02d}.wav").is_file()]
+
+
+async def api_staffplay(req):
+    n = int(req.match_info["n"])
+    if not STAFF_AUDIO_DIR or not 1 <= n <= STAFF_LINES:
+        raise web.HTTPNotFound()
+    path = STAFF_AUDIO_DIR / f"line{n:02d}.wav"
+    if not path.is_file():
+        raise web.HTTPNotFound()
+    return web.FileResponse(path, headers={"Cache-Control": "no-store"})
 
 
 def log(event: dict):
@@ -124,6 +150,7 @@ async def api_config(_req):
         "avatar_signs": [{"id": s["id"], "mn": s["mn"], "en": s.get("en", "")} for s in VOCAB],
         "asr": "speechmatics" if os.environ.get("SPEECHMATICS_API_KEY") else None,
         "conf_min": sign2text.CONF_MIN,
+        "staffplay": staffplay_lines(),
     })
 
 
@@ -227,6 +254,7 @@ def make_app():
     app.router.add_post("/api/log", api_log)
     app.router.add_post("/api/translate", api_translate)
     app.router.add_get("/api/asr", api_asr)
+    app.router.add_get(r"/api/staffplay/{n:\d+}", api_staffplay)
     app.router.add_static("/static/", STATIC)
     # The private avatar (served to localhost only, never copied into this repo):
     app.router.add_static("/p/frontend/", PRIVATE_ROOT / "frontend")

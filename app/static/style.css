@@ -86,3 +86,9 @@ footer { border-top: 1px solid var(--line); padding: 4px 16px 8px; height: 15vh;
 #history .who { color: var(--muted); margin-right: 6px; }
 #history .en { font-size: 13px; display: inline; margin-left: 8px; }
 @media (max-width: 900px) { main { grid-template-columns: 1fr; } .avatar-stage { min-height: 420px; } .cam { height: 60vh; } }
+
+/* Video demo player (?staffplay=1): recorded staff audio through the live ASR path */
+.staffplay { border: 1px dashed var(--warn); border-radius: 8px; padding: 6px 8px; margin: 4px 0; }
+.staffplay-note { color: var(--warn); font-size: 12px; font-weight: 600; margin-bottom: 4px; }
+.staffplay button { font-size: 12px; padding: 4px 8px; }
+.staffplay button.playing { border-color: var(--accent); color: var(--accent); }

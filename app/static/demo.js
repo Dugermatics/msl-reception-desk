@@ -444,6 +444,97 @@ $('mic').addEventListener('click', async () => {
     $('staff-warn').textContent = `Mic / ASR: ${err.message}`;
   }
 });
+// --- Video demo player (?staffplay=1). The staff side is one person's recorded voice, so a
+// recorded line is played through the speakers AND its PCM is streamed in real time into the
+// same Speechmatics session the microphone would use. Transcription, glossmap, checks and the
+// avatar all run live; nothing downstream is prepared. The microphone is not used in this mode.
+const STAFFPLAY = qs.get('staffplay') === '1';
+let playCtx = null, playPcm = null, playPos = 0, pumpTimer = null;
+
+function wavToPcm(buf) {                 // 16 kHz mono s16le WAV -> Uint8Array of the data chunk
+  const v = new DataView(buf);
+  if (v.getUint16(22, true) !== 1 || v.getUint32(24, true) !== 16000 || v.getUint16(34, true) !== 16) {
+    throw new Error('expected 16 kHz mono 16-bit WAV');
+  }
+  for (let p = 12; p + 8 <= buf.byteLength;) {
+    const id = String.fromCharCode(v.getUint8(p), v.getUint8(p + 1), v.getUint8(p + 2), v.getUint8(p + 3));
+    const size = v.getUint32(p + 4, true);
+    if (id === 'data') return new Uint8Array(buf, p + 8, Math.min(size, buf.byteLength - p - 8));
+    p += 8 + size + (size & 1);
+  }
+  throw new Error('no data chunk');
+}
+
+async function ensurePlayerSession() {
+  if (mic && pumpTimer) return;
+  mic = await startSpeechmatics({ test: true });
+  const session = mic;
+  const CHUNK = 3200;                    // 100 ms of 16 kHz s16
+  const silence = new Uint8Array(CHUNK);
+  pumpTimer = setInterval(() => {        // real-time pace; silence between lines lets end-of-utterance fire
+    if (mic !== session) { clearInterval(pumpTimer); pumpTimer = null; return; }
+    let chunk = silence;
+    if (playPcm) {
+      chunk = new Uint8Array(CHUNK);
+      chunk.set(playPcm.subarray(playPos, playPos + CHUNK));
+      playPos += CHUNK;
+      if (playPos >= playPcm.length) playPcm = null;
+    }
+    let s = '';
+    for (let i = 0; i < chunk.length; i++) s += String.fromCharCode(chunk[i]);
+    session.feed(btoa(s));
+  }, 100);
+}
+
+async function playStaffLine(n, btn) {
+  if (playPcm) return;                   // one line at a time
+  $('staff-warn').textContent = '';
+  try {
+    await ensurePlayerSession();
+    const pcm = wavToPcm(await (await fetch(`/api/staffplay/${n}`, { cache: 'no-store' })).arrayBuffer());
+    playCtx = playCtx || new AudioContext();
+    if (playCtx.state === 'suspended') await playCtx.resume();
+    const samples = new Int16Array(pcm.buffer.slice(pcm.byteOffset, pcm.byteOffset + (pcm.length & ~1)));
+    const ab = playCtx.createBuffer(1, samples.length, 16000);
+    const ch = ab.getChannelData(0);
+    for (let i = 0; i < samples.length; i++) ch[i] = samples[i] / 32768;
+    const src = playCtx.createBufferSource();
+    src.buffer = ab;
+    src.connect(playCtx.destination);
+    btn.classList.add('playing');
+    src.onended = () => btn.classList.remove('playing');
+    playPos = 0; playPcm = pcm;          // the pump streams it from the next tick
+    src.start();
+    logClient({ kind: 'staffplay', line: n });
+  } catch (err) {
+    $('staff-warn').textContent = `Demo player: ${err.message}`;
+  }
+}
+
+function setupStaffPlay() {
+  if (!STAFFPLAY) return;
+  if (!CFG.asr || !CFG.staffplay || !CFG.staffplay.length) {
+    $('staff-warn').textContent = 'Demo player: needs SPEECHMATICS_API_KEY and STAFF_AUDIO_DIR on the server.';
+    return;
+  }
+  $('mic').hidden = true;
+  $('asr-mode').value = 'speechmatics';
+  $('asr-mode').disabled = true;
+  const box = $('staffplay-buttons');
+  for (const { n, text } of CFG.staffplay) {
+    const b = document.createElement('button');
+    b.textContent = `${n} ▶ ${text}`;
+    b.addEventListener('click', () => playStaffLine(n, b));
+    box.appendChild(b);
+  }
+  document.addEventListener('keydown', (e) => {
+    if (e.target.closest('input, textarea, select') || e.ctrlKey || e.altKey || e.metaKey) return;
+    const i = Number(e.key) - 1;
+    if (i >= 0 && i < box.children.length) box.children[i].click();
+  });
+  $('staffplay').hidden = false;
+}
+
 $('asr-mode').addEventListener('change', () => {
   $('asr-badge').textContent = $('asr-mode').value === 'speechmatics' ? 'ASR: Speechmatics (mn)' : 'ASR: Web Speech (mn-MN)';
   if (mic) stopMic();
@@ -696,6 +787,7 @@ applyLang();
   if (!CFG.asr) $('asr-mode').value = 'webspeech';
   connectRecognizer();
   applyLang();
+  setupStaffPlay();
   // Hooks for tests/e2e (the UI never uses them).
   window.demo = {
     glossTyped, finalizePatient, playSigns, avatarApi, startSpeechmatics,
