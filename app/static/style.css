@@ -92,3 +92,4 @@ footer { border-top: 1px solid var(--line); padding: 4px 16px 8px; height: 15vh;
 .staffplay-note { color: var(--warn); font-size: 12px; font-weight: 600; margin-bottom: 4px; }
 .staffplay button { font-size: 12px; padding: 4px 8px; }
 .staffplay button.playing { border-color: var(--accent); color: var(--accent); }
+.staffplay-auto { color: var(--muted); font-size: 11px; margin-top: 2px; }

@@ -448,7 +448,20 @@ $('mic').addEventListener('click', async () => {
 // recorded line is played through the speakers AND its PCM is streamed in real time into the
 // same Speechmatics session the microphone would use. Transcription, glossmap, checks and the
 // avatar all run live; nothing downstream is prepared. The microphone is not used in this mode.
-const STAFFPLAY = qs.get('staffplay') === '1';
+// ?staffplay=auto: the next staff line starts by itself once the visitor's message is confirmed and
+// ends with the sign that closes that dialogue line, so the signer never has to reach for the keyboard.
+// Only WHEN a line plays is scripted; what it produces is still decided live. Keys 1-4 keep working.
+const STAFFPLAY = ['1', 'auto'].includes(qs.get('staffplay'));
+const STAFFPLAY_AUTO = qs.get('staffplay') === 'auto';
+const AUTO_STEPS = [            // docs/demo_script.md: patient line ends with `after` -> staff answers with `play`
+  { after: 'sonsgolgui', play: 1 },
+  { after: 'uvduh', play: 2 },
+  { after: 'hodood', play: 3 },
+  { after: 'dahin', play: 'replay' },
+  { after: 'bayarlalaa', play: 4 },
+];
+const AUTO_DELAY_MS = 1200;
+let autoStep = 0;
 let playCtx = null, playPcm = null, playPos = 0, pumpTimer = null;
 
 function wavToPcm(buf) {                 // 16 kHz mono s16le WAV -> Uint8Array of the data chunk
@@ -532,7 +545,34 @@ function setupStaffPlay() {
     const i = Number(e.key) - 1;
     if (i >= 0 && i < box.children.length) box.children[i].click();
   });
+  // Browsers keep audio locked until the first click or key press on the page (e.g. "New session").
+  const unlock = () => { playCtx = playCtx || new AudioContext(); playCtx.resume(); ensurePlayerSession().catch(() => {}); };
+  document.addEventListener('pointerdown', unlock, { once: true });
+  document.addEventListener('keydown', unlock, { once: true });
+  if (STAFFPLAY_AUTO) {
+    finalListeners.push((rec) => {
+      const step = AUTO_STEPS[autoStep];
+      const confirmed = rec.source === 'model' && rec.verified && !(rec.uncertain || []).length;
+      const last = rec.signs.length ? rec.signs[rec.signs.length - 1].label : null;
+      if (!step || !confirmed || last !== step.after) return;   // not this line's end yet: wait for the signer
+      autoStep++;
+      renderAuto();
+      setTimeout(() => {
+        if (step.play === 'replay') $('replay').click();
+        else playStaffLine(step.play, box.children[step.play - 1]);
+      }, AUTO_DELAY_MS);
+    });
+    renderAuto();
+  }
   $('staffplay').hidden = false;
+}
+
+function renderAuto() {
+  if (!STAFFPLAY_AUTO) return;
+  const step = AUTO_STEPS[autoStep];
+  $('staffplay-auto').textContent = step
+    ? `auto · next: ${step.play === 'replay' ? '↻ replay' : step.play} after ${recogName(step.after)}`
+    : 'auto · done';
 }
 
 $('asr-mode').addEventListener('change', () => {
@@ -757,6 +797,7 @@ function resetSession() {
   $('staff-latency').textContent = ''; $('staff-timings').textContent = ''; $('partial').innerHTML = '&nbsp;';
   $('avatar-caption').textContent = ''; setAvatarText('');
   $('history').innerHTML = '';
+  autoStep = 0; renderAuto();
   logClient({ action: 'reset' });
 }
 $('reset').addEventListener('click', resetSession);
