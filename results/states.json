@@ -1,0 +1,284 @@
+{
+ "when": "2026-11-02T14:15:07.135Z",
+ "passed": 17,
+ "total": 17,
+ "cases": [
+  {
+   "name": "confirmed sign -> sentence + English of the same message",
+   "ok": true,
+   "detail": {
+    "msg": 1,
+    "sentence": "Ходоод.",
+    "en": "Stomach.",
+    "en_for": "p1:Ходоод.",
+    "signs": [
+     "STOMACH ✓97%"
+    ],
+    "unsure": false,
+    "candidate": "",
+    "pending": 0
+   }
+  },
+  {
+   "name": "new message clears previous sentence + English immediately",
+   "ok": true,
+   "detail": {
+    "msg": 2,
+    "sentence": "—",
+    "en": "",
+    "en_for": "",
+    "signs": [
+     "SORRY / EXCUSE ME?53% · low confidence"
+    ],
+    "unsure": true,
+    "candidate": "",
+    "pending": 1
+   }
+  },
+  {
+   "name": "uncertain sign -> retry bar, no sentence",
+   "ok": true,
+   "detail": {
+    "msg": 2,
+    "sentence": "—",
+    "en": "",
+    "en_for": "",
+    "signs": [
+     "SORRY / EXCUSE ME?53% · low confidence"
+    ],
+    "unsure": true,
+    "candidate": "",
+    "pending": 1
+   }
+  },
+  {
+   "name": "no sentence or translation appears for an uncertain message",
+   "ok": true,
+   "detail": {
+    "msg": 2,
+    "sentence": "—",
+    "en": "",
+    "en_for": "",
+    "signs": [
+     "SORRY / EXCUSE ME?53% · low confidence"
+    ],
+    "unsure": true,
+    "candidate": "",
+    "pending": 1
+   }
+  },
+  {
+   "name": "live candidate shown apart from recognized signs",
+   "ok": true,
+   "detail": {
+    "msg": 2,
+    "sentence": "—",
+    "en": "",
+    "en_for": "",
+    "signs": [],
+    "unsure": false,
+    "candidate": "SORRY / EXCUSE ME 62%",
+    "pending": 0
+   }
+  },
+  {
+   "name": "candidate cleared when the sign is committed",
+   "ok": true,
+   "detail": {
+    "msg": 2,
+    "sentence": "—",
+    "en": "",
+    "en_for": "",
+    "signs": [
+     "SORRY / EXCUSE ME ✓86%"
+    ],
+    "unsure": false,
+    "candidate": "",
+    "pending": 1
+   }
+  },
+  {
+   "name": "retry continues the same message; duplicate ignored",
+   "ok": true,
+   "detail": {
+    "msg": 2,
+    "sentence": "—",
+    "en": "",
+    "en_for": "",
+    "signs": [
+     "SORRY / EXCUSE ME ✓86%",
+     "AGAIN ✓95%"
+    ],
+    "unsure": false,
+    "candidate": "",
+    "pending": 2
+   }
+  },
+  {
+   "name": "after retry: sentence + English, same message",
+   "ok": true,
+   "detail": {
+    "msg": 2,
+    "sentence": "Уучлаарай, дахин хэлнэ үү.",
+    "en": "Sorry, please say again.",
+    "en_for": "p2:Уучлаарай, дахин хэлнэ үү.",
+    "signs": [
+     "SORRY / EXCUSE ME ✓86%",
+     "AGAIN ✓95%"
+    ],
+    "unsure": false,
+    "candidate": "",
+    "pending": 0
+   }
+  },
+  {
+   "name": "late translation never lands under a newer message",
+   "ok": true,
+   "detail": {
+    "msg": 4,
+    "sentence": "—",
+    "en": "",
+    "en_for": "",
+    "signs": [
+     "HELLO?41% · low confidence"
+    ],
+    "unsure": true,
+    "candidate": "",
+    "pending": 0
+   }
+  },
+  {
+   "name": "staff: only supported signs played",
+   "ok": true,
+   "detail": {
+    "dir": "staff",
+    "sentence": "Баяртай, эрүүл болоорой.",
+    "signs": [
+     "bayartai"
+    ],
+    "rejected": [],
+    "text": [
+     "эрүүл болоорой"
+    ],
+    "verified": true,
+    "speech_to_avatar_ms": 3332,
+    "llm_ms": 3299,
+    "model_ms": 1843,
+    "check_ms": 1456,
+    "attempts": 1,
+    "load_ms": 29,
+    "first_frame_ms": 33,
+    "total_ms": 1821
+   }
+  },
+  {
+   "name": "staff: unsupported words in the text-only box",
+   "ok": true,
+   "detail": {
+    "caption": "",
+    "text_only": "эрүүл болоорой"
+   }
+  },
+  {
+   "name": "avatar caption shows only performed signs",
+   "ok": true,
+   "detail": [
+    "GOODBYE"
+   ]
+  },
+  {
+   "name": "staff English belongs to the shown sentence",
+   "ok": true,
+   "detail": {
+    "sentence": "Баяртай, эрүүл болоорой.",
+    "en": "Goodbye, get well.",
+    "en_for": "s1:Баяртай, эрүүл болоорой.",
+    "signs": [
+     "GOODBYE"
+    ],
+    "text_only": "эрүүл болоорой"
+   }
+  },
+  {
+   "name": "staff timings recorded",
+   "ok": true,
+   "detail": {
+    "dir": "staff",
+    "sentence": "Баяртай, эрүүл болоорой.",
+    "signs": [
+     "bayartai"
+    ],
+    "rejected": [],
+    "text": [
+     "эрүүл болоорой"
+    ],
+    "verified": true,
+    "speech_to_avatar_ms": 3332,
+    "llm_ms": 3299,
+    "model_ms": 1843,
+    "check_ms": 1456,
+    "attempts": 1,
+    "load_ms": 29,
+    "first_frame_ms": 33,
+    "total_ms": 1821
+   }
+  },
+  {
+   "name": "MN switch: same Mongolian + English text",
+   "ok": true,
+   "detail": {
+    "before": {
+     "sentence": "Баяртай, эрүүл болоорой.",
+     "en": "Goodbye, get well.",
+     "en_for": "s1:Баяртай, эрүүл болоорой.",
+     "signs": [
+      "GOODBYE"
+     ],
+     "text_only": "эрүүл болоорой"
+    },
+    "after": {
+     "sentence": "Баяртай, эрүүл болоорой.",
+     "en": "Goodbye, get well.",
+     "en_for": "s1:Баяртай, эрүүл болоорой.",
+     "signs": [
+      "баяртай"
+     ],
+     "text_only": "эрүүл болоорой"
+    }
+   }
+  },
+  {
+   "name": "reset clears both panels and the transcript",
+   "ok": true,
+   "detail": {
+    "staff": {
+     "sentence": "—",
+     "en": "",
+     "en_for": "",
+     "signs": [],
+     "text_only": ""
+    },
+    "avatar": {
+     "caption": "",
+     "text_only": ""
+    },
+    "patient": {
+     "msg": 0,
+     "sentence": "—",
+     "en": "",
+     "en_for": "",
+     "signs": [],
+     "unsure": false,
+     "candidate": "",
+     "pending": 0
+    },
+    "history": []
+   }
+  },
+  {
+   "name": "no page errors",
+   "ok": true,
+   "detail": []
+  }
+ ]
+}

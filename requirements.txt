@@ -1,0 +1,8 @@
+openai
+python-dotenv
+aiohttp
+requests
+pytest
+# asr/record_lines.py only:
+numpy
+sounddevice

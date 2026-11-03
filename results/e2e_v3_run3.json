@@ -1,0 +1,380 @@
+{
+ "run": "3",
+ "patient_video": "run3.avi",
+ "when": "2026-11-02T14:24:49.432Z",
+ "page_errors": [],
+ "staff_lines_correct": 5,
+ "staff_lines": 5,
+ "patient_lines_correct": 4,
+ "patient_lines": 5,
+ "patient_outcomes": {
+  "correct": 1,
+  "retry": 4,
+  "wrong": 0
+ },
+ "completed": true,
+ "screen_violations": [],
+ "screen_violation_count": 0,
+ "captions_seen": [
+  "HELLO",
+  "WHAT HAPPENED",
+  "HURT / BE ILL",
+  "UNDERSTOOD / GOT IT",
+  "DOCTOR",
+  "WAIT",
+  "GOODBYE"
+ ],
+ "turns": [
+  {
+   "line": 1,
+   "who": "patient",
+   "expect": [
+    "sain_baina_uu",
+    "sonsgolgui"
+   ],
+   "recognized": [
+    {
+     "label": "sain_baina_uu",
+     "confidence": 0.472,
+     "uncertain": true
+    },
+    {
+     "label": "sonsgolgui",
+     "confidence": 0.466,
+     "uncertain": true
+    }
+   ],
+   "text": "",
+   "source": "none",
+   "verified": false,
+   "uncertain": [
+    {
+     "label": "sain_baina_uu",
+     "confidence": 0.472,
+     "uncertain": true
+    },
+    {
+     "label": "sonsgolgui",
+     "confidence": 0.466,
+     "uncertain": true
+    }
+   ],
+   "labels_correct": true,
+   "outcome": "retry",
+   "wrong_shown": [],
+   "duplicates_suppressed": 0,
+   "recog_ms": [
+    27,
+    22
+   ],
+   "sign_to_text_ms": [],
+   "llm_ms": 0,
+   "used": [],
+   "turn_ms": 31033
+  },
+  {
+   "line": 2,
+   "who": "staff",
+   "expect": [
+    "sain_baina_uu",
+    "yasan_be"
+   ],
+   "sentence": "Сайн байна уу? Танд юу тохиолдов.",
+   "signs": [
+    "sain_baina_uu",
+    "yasan_be"
+   ],
+   "rejected": [],
+   "text": [],
+   "verified": true,
+   "signs_correct": true,
+   "asr_ms": 605,
+   "llm_ms": 3414,
+   "model_ms": 1355,
+   "check_ms": 2059,
+   "attempts": 1,
+   "load_ms": 78,
+   "first_frame_ms": 82,
+   "avatar_total_ms": 4591,
+   "speech_to_avatar_ms": 4101,
+   "text_only_shown": "",
+   "text_only_ok": true,
+   "turn_ms": 12807
+  },
+  {
+   "line": 3,
+   "who": "patient",
+   "expect": [
+    "minii_manai",
+    "huuhed",
+    "uvduh"
+   ],
+   "recognized": [
+    {
+     "label": "minii_manai",
+     "confidence": 0.563,
+     "uncertain": true
+    },
+    {
+     "label": "huuhed",
+     "confidence": 0.684,
+     "uncertain": false
+    },
+    {
+     "label": "uvduh",
+     "confidence": 0.879,
+     "uncertain": false
+    }
+   ],
+   "text": "",
+   "source": "uncertain",
+   "verified": false,
+   "uncertain": [
+    {
+     "label": "minii_manai",
+     "confidence": 0.563,
+     "uncertain": true
+    }
+   ],
+   "labels_correct": true,
+   "outcome": "retry",
+   "wrong_shown": [],
+   "duplicates_suppressed": 0,
+   "recog_ms": [
+    9,
+    17,
+    8
+   ],
+   "sign_to_text_ms": [],
+   "llm_ms": 0,
+   "used": [
+    "huuhed",
+    "uvduh"
+   ],
+   "turn_ms": 31709
+  },
+  {
+   "line": 4,
+   "who": "staff",
+   "expect": [
+    "uvduh"
+   ],
+   "sentence": "Хаана нь өвдөж байна?",
+   "signs": [
+    "uvduh"
+   ],
+   "rejected": [],
+   "text": [
+    "хаана өвдөж байна?"
+   ],
+   "verified": true,
+   "signs_correct": true,
+   "asr_ms": 608,
+   "llm_ms": 4451,
+   "model_ms": 1675,
+   "check_ms": 2776,
+   "attempts": 1,
+   "load_ms": 59,
+   "first_frame_ms": 59,
+   "avatar_total_ms": 2799,
+   "speech_to_avatar_ms": 5118,
+   "text_only_shown": "хаана өвдөж байна?",
+   "text_only_ok": true,
+   "turn_ms": 10757
+  },
+  {
+   "line": 5,
+   "who": "patient",
+   "expect": [
+    "hodood"
+   ],
+   "recognized": [
+    {
+     "label": "minii_manai",
+     "confidence": 0.527,
+     "uncertain": true
+    }
+   ],
+   "text": "",
+   "source": "none",
+   "verified": false,
+   "uncertain": [
+    {
+     "label": "minii_manai",
+     "confidence": 0.527,
+     "uncertain": true
+    }
+   ],
+   "labels_correct": false,
+   "outcome": "retry",
+   "wrong_shown": [],
+   "duplicates_suppressed": 0,
+   "recog_ms": [
+    20
+   ],
+   "sign_to_text_ms": [],
+   "llm_ms": 0,
+   "used": [],
+   "turn_ms": 18437
+  },
+  {
+   "line": 6,
+   "who": "staff",
+   "expect": [
+    "oilgoloo",
+    "emch",
+    "huleeh"
+   ],
+   "sentence": "Ойлголоо. Эмчид үзүүл. Түр хүлээнэ үү.",
+   "signs": [
+    "oilgoloo",
+    "emch",
+    "huleeh"
+   ],
+   "rejected": [],
+   "text": [
+    "Эмчид үзүүл"
+   ],
+   "verified": true,
+   "signs_correct": true,
+   "asr_ms": 715,
+   "llm_ms": 12204,
+   "model_ms": 6425,
+   "check_ms": 5777,
+   "attempts": 2,
+   "load_ms": 118,
+   "first_frame_ms": 120,
+   "avatar_total_ms": 8336,
+   "speech_to_avatar_ms": 13039,
+   "text_only_shown": "Эмчид үзүүл",
+   "text_only_ok": true,
+   "turn_ms": 25868
+  },
+  {
+   "line": 7,
+   "who": "patient",
+   "expect": [
+    "uuchlaarai",
+    "dahin"
+   ],
+   "recognized": [
+    {
+     "label": "uuchlaarai",
+     "confidence": 0.454,
+     "uncertain": true
+    },
+    {
+     "label": "dahin",
+     "confidence": 0.974,
+     "uncertain": false
+    }
+   ],
+   "text": "",
+   "source": "uncertain",
+   "verified": false,
+   "uncertain": [
+    {
+     "label": "uuchlaarai",
+     "confidence": 0.454,
+     "uncertain": true
+    }
+   ],
+   "labels_correct": true,
+   "outcome": "retry",
+   "wrong_shown": [],
+   "duplicates_suppressed": 0,
+   "recog_ms": [
+    23,
+    17
+   ],
+   "sign_to_text_ms": [],
+   "llm_ms": 0,
+   "used": [
+    "dahin"
+   ],
+   "turn_ms": 7068
+  },
+  {
+   "line": 8,
+   "who": "staff",
+   "replay": true,
+   "expect": [
+    "oilgoloo",
+    "emch",
+    "huleeh"
+   ],
+   "signs": [
+    "oilgoloo",
+    "emch",
+    "huleeh"
+   ],
+   "signs_correct": true,
+   "load_ms": 114,
+   "first_frame_ms": 115,
+   "total_ms": 7010,
+   "turn_ms": 7013
+  },
+  {
+   "line": 9,
+   "who": "patient",
+   "expect": [
+    "bayarlalaa"
+   ],
+   "recognized": [
+    {
+     "label": "bayarlalaa",
+     "confidence": 0.919,
+     "uncertain": false
+    }
+   ],
+   "text": "Баярлалаа.",
+   "source": "model",
+   "verified": true,
+   "uncertain": [],
+   "labels_correct": true,
+   "outcome": "correct",
+   "wrong_shown": [],
+   "duplicates_suppressed": 0,
+   "recog_ms": [
+    25
+   ],
+   "sign_to_text_ms": [
+    1436
+   ],
+   "llm_ms": 1430,
+   "used": [
+    "bayarlalaa"
+   ],
+   "turn_ms": 23930
+  },
+  {
+   "line": 10,
+   "who": "staff",
+   "expect": [
+    "bayartai"
+   ],
+   "sentence": "Баяртай. Эрүүл болоорой .",
+   "signs": [
+    "bayartai"
+   ],
+   "rejected": [],
+   "text": [
+    "Эрүүл болоорой"
+   ],
+   "verified": true,
+   "signs_correct": true,
+   "asr_ms": 626,
+   "llm_ms": 2930,
+   "model_ms": 1581,
+   "check_ms": 1348,
+   "attempts": 1,
+   "load_ms": 47,
+   "first_frame_ms": 49,
+   "avatar_total_ms": 2043,
+   "speech_to_avatar_ms": 3605,
+   "text_only_shown": "Эрүүл болоорой",
+   "text_only_ok": true,
+   "turn_ms": 10815
+  }
+ ]
+}

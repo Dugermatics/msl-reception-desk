@@ -1,0 +1,15 @@
+{
+  "_note": "Signs the patient-side recognizer may report in the demo (its --only closed vocabulary). Ids are the recognizer labels. 'words' = the Mongolian words a sentence built from this sign may use (sign2text.py checks the model's sentence against them). Labels only; the model and its training data are not in this repo.",
+  "signs": [
+    {"id": "sain_baina_uu", "mn": "сайн байна уу", "en": "hello", "words": ["сайн", "байна", "уу"]},
+    {"id": "sonsgolgui", "mn": "сонсголгүй", "en": "deaf", "words": ["сонсголгүй", "дүлий"]},
+    {"id": "minii_manai", "mn": "миний / манай", "en": "my / our", "words": ["миний", "манай", "минь", "маань"]},
+    {"id": "huuhed", "mn": "хүүхэд", "en": "child", "words": ["хүүхэд"]},
+    {"id": "uvduh", "mn": "өвдөх", "en": "hurt / be ill", "words": ["өвдөх", "өвдөж", "өвдөөд", "өвчтэй", "өвдсөн"]},
+    {"id": "hodood", "mn": "ходоод", "en": "stomach", "words": ["ходоод"]},
+    {"id": "uuchlaarai", "mn": "уучлаарай", "en": "sorry / excuse me", "words": ["уучлаарай"]},
+    {"id": "dahin", "mn": "дахин (хэлнэ үү)", "en": "again (please repeat)", "words": ["дахин", "хэлнэ", "давтана", "хэлээч"]},
+    {"id": "bayarlalaa", "mn": "баярлалаа", "en": "thank you", "words": ["баярлалаа"]}
+  ],
+  "function_words": ["би", "нь", "маань", "минь", "байна", "байгаа", "уу", "үү", "ба"]
+}

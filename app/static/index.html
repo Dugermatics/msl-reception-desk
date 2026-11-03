@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MSL Reception Desk</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="demo">
+  <header>
+    <div class="title">
+      <h1 data-i18n="title">Hospital Reception · Two-way MSL Interpreter</h1>
+      <span class="scope" data-i18n="scope">Relays communication only. No diagnosis or medical advice.</span>
+    </div>
+    <div class="controls">
+      <div class="badges" title="Technical status">
+        <span class="badge meta" id="model-badge">Muse Spark</span>
+        <span class="badge" id="asr-badge">ASR</span>
+        <span class="badge" id="recog-badge">Recognizer</span>
+      </div>
+      <div class="seg" role="group" aria-label="Interface language">
+        <button id="lang-en" data-lang="en">EN</button><button id="lang-mn" data-lang="mn">MN</button>
+      </div>
+      <button id="reset" class="ghost" data-i18n="reset" title="Clear both panels and the transcript">New session</button>
+      <button id="dev-toggle" class="ghost" title="Developer details">dev</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Staff -> Deaf visitor -->
+    <section class="panel" id="staff">
+      <h2><span data-i18n="staff_title">Staff → Deaf Visitor</span> <small data-i18n="staff_sub">speech → sign</small></h2>
+      <div class="row">
+        <button id="mic" class="big"></button>
+        <button id="replay" disabled data-i18n="replay">↻ Replay signs</button>
+        <select id="asr-mode" class="dev" title="Speech recognition">
+          <option value="speechmatics">Speechmatics (mn)</option>
+          <option value="webspeech">Web Speech (fallback)</option>
+        </select>
+      </div>
+      <div class="partial" id="partial">&nbsp;</div>
+      <div class="label" data-i18n="recognized_speech">Recognized Speech (Mongolian)</div>
+      <div class="sentence big" id="staff-sentence">—</div>
+      <div class="en" id="staff-en"></div>
+      <div class="label" data-i18n="gloss_seq">MSL Gloss Sequence</div>
+      <div class="chips" id="staff-signs"></div>
+      <div class="label" data-i18n="text_only">Shown as text (no sign available)</div>
+      <div class="textonly" id="staff-text"></div>
+      <div class="warn" id="staff-warn"></div>
+      <div class="latency" id="staff-latency"></div>
+      <div class="timings dev" id="staff-timings"></div>
+      <form id="typed" class="dev"><input id="typed-input" autocomplete="off"></form>
+    </section>
+
+    <!-- Avatar -->
+    <section class="avatar">
+      <div class="avatar-head" data-i18n="avatar_title">3D Signing Avatar</div>
+      <div class="avatar-stage"><iframe id="avatar" src="/p/frontend/avatar_rpm.html?hands=0" title="Avatar"></iframe></div>
+      <div class="avatar-foot">
+        <div class="caption" id="avatar-caption"></div>
+        <div class="avatar-textonly" id="avatar-textonly" hidden>
+          <span class="tag" data-i18n="not_signed">Text only — not signed</span>
+          <span id="avatar-textonly-text"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deaf visitor -> staff -->
+    <section class="panel" id="patient">
+      <h2><span data-i18n="patient_title">Deaf Visitor → Staff</span> <small data-i18n="patient_sub">sign → text</small></h2>
+      <div class="cam">
+        <img id="cam" alt="camera">
+        <div class="signing" id="signing" data-i18n="signing">signing…</div>
+        <div class="track" id="track"></div>
+      </div>
+      <div class="candidate" id="candidate" hidden><span class="tag" data-i18n="candidate">Live candidate · not confirmed</span> <span id="candidate-text"></span></div>
+      <div class="label"><span data-i18n="recognized_signs">Recognized Signs</span> · <span data-i18n="confidence">Recognition Confidence</span> <span class="msgno" id="patient-msgno"></span></div>
+      <div class="chips" id="patient-signs"></div>
+      <div class="unsure" id="patient-unsure" hidden>
+        <span data-i18n="uncertain_repeat">Uncertain Sign — Please Repeat</span>
+        <button id="retry" data-i18n="retry">Retry</button>
+      </div>
+      <div class="label" data-i18n="mn_interp">Mongolian Interpretation</div>
+      <div class="sentence big" id="patient-sentence">—</div>
+      <div class="label en-label" data-i18n="en_trans">English Translation</div>
+      <div class="en" id="patient-en"></div>
+      <div class="warn" id="patient-warn"></div>
+      <div class="latency" id="patient-latency"></div>
+      <div class="timings dev" id="patient-timings"></div>
+      <div class="row small dev">
+        <button id="send-now" data-i18n="send">Send now</button>
+        <button id="clear" data-i18n="clear">Clear</button>
+        <label class="tts"><input type="checkbox" id="tts" disabled> <span data-i18n="tts">Read aloud</span></label>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <ol id="history"></ol>
+  </footer>
+
+  <script type="module" src="/static/demo.js"></script>
+</body>
+</html>

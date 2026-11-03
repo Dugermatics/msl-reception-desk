@@ -1,0 +1,977 @@
+{
+ "model": "meta-models/muse-spark-open-1026",
+ "rows": [
+  {
+   "effort": "minimal",
+   "rep": 1,
+   "found": 9,
+   "total": 9,
+   "clean": 6,
+   "verified": 6,
+   "n": 6,
+   "retries": 0,
+   "total_secs": 21.7,
+   "median_line_secs": 2.9000000000000004,
+   "max_line_secs": 6.4,
+   "calls": 12,
+   "completion_tokens": 3880,
+   "reasoning_tokens": 3602,
+   "lines": [
+    {
+     "sentence": "Сайн байна уу. Танд юу тохиолдов?",
+     "secs": 2.6,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "sain_baina_uu",
+      "yasan_be"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Хаана нь өвдөж байна?",
+     "secs": 5.3,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "uvduh"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Ойлголоо. Эмчид үзүүлье. Түр хүлээнэ үү.",
+     "secs": 6.4,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "oilgoloo",
+      "emch",
+      "huleeh"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Баяртай, эрүүл болоорой.",
+     "secs": 3.2,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "bayartai"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Юу болсон бэ?",
+     "secs": 2.2,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Яасан бэ?",
+     "secs": 2.0,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "extra": []
+    }
+   ]
+  },
+  {
+   "effort": "minimal",
+   "rep": 2,
+   "found": 9,
+   "total": 9,
+   "clean": 6,
+   "verified": 6,
+   "n": 6,
+   "retries": 1,
+   "total_secs": 24.5,
+   "median_line_secs": 2.65,
+   "max_line_secs": 10.8,
+   "calls": 14,
+   "completion_tokens": 5038,
+   "reasoning_tokens": 4674,
+   "lines": [
+    {
+     "sentence": "Сайн байна уу. Танд юу тохиолдов?",
+     "secs": 2.3,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "sain_baina_uu",
+      "yasan_be"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Хаана нь өвдөж байна?",
+     "secs": 3.8,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "uvduh"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Ойлголоо. Эмчид үзүүлье. Түр хүлээнэ үү.",
+     "secs": 10.8,
+     "attempts": 2,
+     "verified": true,
+     "signs": [
+      "oilgoloo",
+      "emch",
+      "huleeh"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Баяртай, эрүүл болоорой.",
+     "secs": 2.9,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "bayartai"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Юу болсон бэ?",
+     "secs": 2.4,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Яасан бэ?",
+     "secs": 2.3,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "extra": []
+    }
+   ]
+  },
+  {
+   "effort": "low",
+   "rep": 1,
+   "found": 9,
+   "total": 9,
+   "clean": 6,
+   "verified": 6,
+   "n": 6,
+   "retries": 1,
+   "total_secs": 26.9,
+   "median_line_secs": 3.65,
+   "max_line_secs": 9.6,
+   "calls": 14,
+   "completion_tokens": 5011,
+   "reasoning_tokens": 4648,
+   "lines": [
+    {
+     "sentence": "Сайн байна уу. Танд юу тохиолдов?",
+     "secs": 4.2,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "sain_baina_uu",
+      "yasan_be"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Хаана нь өвдөж байна?",
+     "secs": 3.9,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "uvduh"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Ойлголоо. Эмчид үзүүлье. Түр хүлээнэ үү.",
+     "secs": 9.6,
+     "attempts": 2,
+     "verified": true,
+     "signs": [
+      "oilgoloo",
+      "emch",
+      "huleeh"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Баяртай, эрүүл болоорой.",
+     "secs": 3.4,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "bayartai"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Юу болсон бэ?",
+     "secs": 3.2,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Яасан бэ?",
+     "secs": 2.6,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "extra": []
+    }
+   ]
+  },
+  {
+   "effort": "low",
+   "rep": 2,
+   "found": 9,
+   "total": 9,
+   "clean": 6,
+   "verified": 6,
+   "n": 6,
+   "retries": 0,
+   "total_secs": 28.9,
+   "median_line_secs": 4.75,
+   "max_line_secs": 7.1,
+   "calls": 12,
+   "completion_tokens": 4574,
+   "reasoning_tokens": 4299,
+   "lines": [
+    {
+     "sentence": "Сайн байна уу. Танд юу тохиолдов?",
+     "secs": 3.1,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "sain_baina_uu",
+      "yasan_be"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Хаана нь өвдөж байна?",
+     "secs": 4.7,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "uvduh"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Ойлголоо. Эмчид үзүүлье. Түр хүлээнэ үү.",
+     "secs": 7.1,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "oilgoloo",
+      "emch",
+      "huleeh"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Баяртай, эрүүл болоорой.",
+     "secs": 6.8,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "bayartai"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Юу болсон бэ?",
+     "secs": 2.5,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Яасан бэ?",
+     "secs": 4.8,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "extra": []
+    }
+   ]
+  },
+  {
+   "effort": "medium",
+   "rep": 1,
+   "found": 9,
+   "total": 9,
+   "clean": 6,
+   "verified": 6,
+   "n": 6,
+   "retries": 1,
+   "total_secs": 36.3,
+   "median_line_secs": 5.1,
+   "max_line_secs": 14.3,
+   "calls": 14,
+   "completion_tokens": 9188,
+   "reasoning_tokens": 8805,
+   "lines": [
+    {
+     "sentence": "Сайн байна уу. Танд юу тохиолдов?",
+     "secs": 3.8,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "sain_baina_uu",
+      "yasan_be"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Хаана нь өвдөж байна?",
+     "secs": 5.2,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "uvduh"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Ойлголоо. Эмчид үзүүлье. Түр хүлээнэ үү.",
+     "secs": 14.3,
+     "attempts": 2,
+     "verified": true,
+     "signs": [
+      "oilgoloo",
+      "emch",
+      "huleeh"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Баяртай, эрүүл болоорой.",
+     "secs": 5.1,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "bayartai"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Юу болсон бэ?",
+     "secs": 2.8,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Яасан бэ?",
+     "secs": 5.1,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "extra": []
+    }
+   ]
+  },
+  {
+   "effort": "medium",
+   "rep": 2,
+   "found": 9,
+   "total": 9,
+   "clean": 6,
+   "verified": 6,
+   "n": 6,
+   "retries": 1,
+   "total_secs": 41.5,
+   "median_line_secs": 5.05,
+   "max_line_secs": 16.6,
+   "calls": 14,
+   "completion_tokens": 12050,
+   "reasoning_tokens": 11737,
+   "lines": [
+    {
+     "sentence": "Сайн байна уу. Танд юу тохиолдов?",
+     "secs": 16.6,
+     "attempts": 2,
+     "verified": true,
+     "signs": [
+      "sain_baina_uu",
+      "yasan_be"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Хаана нь өвдөж байна?",
+     "secs": 5.6,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "uvduh"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Ойлголоо. Эмчид үзүүлье. Түр хүлээнэ үү.",
+     "secs": 6.2,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "oilgoloo",
+      "emch",
+      "huleeh"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Баяртай, эрүүл болоорой.",
+     "secs": 4.5,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "bayartai"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Юу болсон бэ?",
+     "secs": 4.5,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Яасан бэ?",
+     "secs": 4.1,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "extra": []
+    }
+   ]
+  },
+  {
+   "effort": "high",
+   "rep": 1,
+   "found": 9,
+   "total": 9,
+   "clean": 6,
+   "verified": 6,
+   "n": 6,
+   "retries": 1,
+   "total_secs": 55.8,
+   "median_line_secs": 6.949999999999999,
+   "max_line_secs": 17.3,
+   "calls": 13,
+   "completion_tokens": 17018,
+   "reasoning_tokens": 16723,
+   "lines": [
+    {
+     "sentence": "Сайн байна уу. Танд юу тохиолдов?",
+     "secs": 5.5,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "sain_baina_uu",
+      "yasan_be"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Хаана нь өвдөж байна?",
+     "secs": 7.3,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "uvduh"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Ойлголоо. Эмчид үзүүлье. Түр хүлээнэ үү.",
+     "secs": 17.3,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "oilgoloo",
+      "emch",
+      "huleeh"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Баяртай, эрүүл болоорой.",
+     "secs": 6.2,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "bayartai"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Юу болсон бэ?",
+     "secs": 6.6,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Яасан бэ?",
+     "secs": 12.9,
+     "attempts": 2,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "extra": []
+    }
+   ]
+  },
+  {
+   "effort": "high",
+   "rep": 2,
+   "found": 9,
+   "total": 9,
+   "clean": 6,
+   "verified": 6,
+   "n": 6,
+   "retries": 0,
+   "total_secs": 48.7,
+   "median_line_secs": 7.3999999999999995,
+   "max_line_secs": 13.1,
+   "calls": 12,
+   "completion_tokens": 14296,
+   "reasoning_tokens": 14006,
+   "lines": [
+    {
+     "sentence": "Сайн байна уу. Танд юу тохиолдов?",
+     "secs": 5.6,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "sain_baina_uu",
+      "yasan_be"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Хаана нь өвдөж байна?",
+     "secs": 8.7,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "uvduh"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Ойлголоо. Эмчид үзүүлье. Түр хүлээнэ үү.",
+     "secs": 13.1,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "oilgoloo",
+      "emch",
+      "huleeh"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Баяртай, эрүүл болоорой.",
+     "secs": 9.1,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "bayartai"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Юу болсон бэ?",
+     "secs": 6.1,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Яасан бэ?",
+     "secs": 6.1,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "extra": []
+    }
+   ]
+  },
+  {
+   "effort": "xhigh",
+   "rep": 1,
+   "found": 9,
+   "total": 9,
+   "clean": 6,
+   "verified": 6,
+   "n": 6,
+   "retries": 0,
+   "total_secs": 42.4,
+   "median_line_secs": 5.9,
+   "max_line_secs": 13.8,
+   "calls": 12,
+   "completion_tokens": 12324,
+   "reasoning_tokens": 12039,
+   "lines": [
+    {
+     "sentence": "Сайн байна уу. Танд юу тохиолдов?",
+     "secs": 5.4,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "sain_baina_uu",
+      "yasan_be"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Хаана нь өвдөж байна?",
+     "secs": 6.8,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "uvduh"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Ойлголоо. Эмчид үзүүлье. Түр хүлээнэ үү.",
+     "secs": 13.8,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "oilgoloo",
+      "emch",
+      "huleeh"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Баяртай, эрүүл болоорой.",
+     "secs": 6.4,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "bayartai"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Юу болсон бэ?",
+     "secs": 4.7,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Яасан бэ?",
+     "secs": 5.3,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "extra": []
+    }
+   ]
+  },
+  {
+   "effort": "xhigh",
+   "rep": 2,
+   "found": 9,
+   "total": 9,
+   "clean": 6,
+   "verified": 6,
+   "n": 6,
+   "retries": 2,
+   "total_secs": 65.9,
+   "median_line_secs": 7.1,
+   "max_line_secs": 26.2,
+   "calls": 15,
+   "completion_tokens": 19809,
+   "reasoning_tokens": 19421,
+   "lines": [
+    {
+     "sentence": "Сайн байна уу. Танд юу тохиолдов?",
+     "secs": 7.2,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "sain_baina_uu",
+      "yasan_be"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Хаана нь өвдөж байна?",
+     "secs": 6.6,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "uvduh"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Ойлголоо. Эмчид үзүүлье. Түр хүлээнэ үү.",
+     "secs": 26.2,
+     "attempts": 2,
+     "verified": true,
+     "signs": [
+      "oilgoloo",
+      "emch",
+      "huleeh"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Баяртай, эрүүл болоорой.",
+     "secs": 7.0,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "bayartai"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Юу болсон бэ?",
+     "secs": 12.9,
+     "attempts": 2,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Яасан бэ?",
+     "secs": 6.0,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "extra": []
+    }
+   ]
+  },
+  {
+   "effort": "max",
+   "rep": 1,
+   "found": 9,
+   "total": 9,
+   "clean": 6,
+   "verified": 6,
+   "n": 6,
+   "retries": 0,
+   "total_secs": 40.3,
+   "median_line_secs": 5.4,
+   "max_line_secs": 13.5,
+   "calls": 12,
+   "completion_tokens": 11582,
+   "reasoning_tokens": 11300,
+   "lines": [
+    {
+     "sentence": "Сайн байна уу. Танд юу тохиолдов?",
+     "secs": 5.2,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "sain_baina_uu",
+      "yasan_be"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Хаана нь өвдөж байна?",
+     "secs": 5.6,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "uvduh"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Ойлголоо. Эмчид үзүүлье. Түр хүлээнэ үү.",
+     "secs": 13.5,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "oilgoloo",
+      "emch",
+      "huleeh"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Баяртай, эрүүл болоорой.",
+     "secs": 6.5,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "bayartai"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Юу болсон бэ?",
+     "secs": 4.9,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Яасан бэ?",
+     "secs": 4.6,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "extra": []
+    }
+   ]
+  },
+  {
+   "effort": "max",
+   "rep": 2,
+   "found": 9,
+   "total": 9,
+   "clean": 6,
+   "verified": 6,
+   "n": 6,
+   "retries": 0,
+   "total_secs": 44.5,
+   "median_line_secs": 6.15,
+   "max_line_secs": 15.2,
+   "calls": 12,
+   "completion_tokens": 12547,
+   "reasoning_tokens": 12261,
+   "lines": [
+    {
+     "sentence": "Сайн байна уу. Танд юу тохиолдов?",
+     "secs": 5.9,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "sain_baina_uu",
+      "yasan_be"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Хаана нь өвдөж байна?",
+     "secs": 6.7,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "uvduh"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Ойлголоо. Эмчид үзүүлье. Түр хүлээнэ үү.",
+     "secs": 15.2,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "oilgoloo",
+      "emch",
+      "huleeh"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Баяртай, эрүүл болоорой.",
+     "secs": 6.4,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "bayartai"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Юу болсон бэ?",
+     "secs": 4.7,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "extra": []
+    },
+    {
+     "sentence": "Яасан бэ?",
+     "secs": 5.7,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "extra": []
+    }
+   ]
+  }
+ ]
+}

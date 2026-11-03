@@ -1,0 +1,220 @@
+{
+ "model": "muse-voice-transcribe-1.0",
+ "glossmap": "meta-models/muse-spark-open-1026",
+ "rows": [
+  {
+   "line": 1,
+   "said": "Сайн байна уу. Танд юу тохиолдов?",
+   "heard": " Sembenno, танд  you'd",
+   "cer": 0.806,
+   "asr_secs": 2.5,
+   "signs": [
+    "sain_baina_uu"
+   ],
+   "text": [
+    "танд you'd"
+   ],
+   "signs_ok": false
+  },
+  {
+   "line": 2,
+   "said": "Хаана нь өвдөж байна?",
+   "heard": " хана нь үрдэж байна.",
+   "cer": 0.2,
+   "asr_secs": 2.1,
+   "signs": [],
+   "text": [
+    "хана нь үрдэж байна."
+   ],
+   "signs_ok": false
+  },
+  {
+   "line": 3,
+   "said": "Ойлголоо. Эмчид үзүүлье. Түр хүлээнэ үү.",
+   "heard": " Аялгалаан эмчэд үзүүлээ түр хүлээнө.",
+   "cer": 0.351,
+   "asr_secs": 2.4,
+   "signs": [
+    "emch",
+    "huleeh"
+   ],
+   "text": [
+    "Аялгалаан",
+    "үзүүлээ",
+    "түр"
+   ],
+   "signs_ok": false
+  },
+  {
+   "line": 4,
+   "said": "Баяртай, эрүүл болоорой.",
+   "heard": " Байртай эрүүл болоороо",
+   "cer": 0.091,
+   "asr_secs": 2.1,
+   "signs": [
+    "bayartai"
+   ],
+   "text": [
+    "эрүүл болоорой"
+   ],
+   "signs_ok": true
+  },
+  {
+   "line": 5,
+   "said": "Юу болсон бэ?",
+   "heard": " YuasınYuasın be.",
+   "cer": 1.167,
+   "asr_secs": 1.8,
+   "signs": [
+    "yasan_be"
+   ],
+   "text": [],
+   "signs_ok": true
+  },
+  {
+   "line": 6,
+   "said": "Яасан бэ?",
+   "heard": "Yasembe.",
+   "cer": 1.0,
+   "asr_secs": 1.7,
+   "signs": [
+    "yasan_be"
+   ],
+   "text": [],
+   "signs_ok": true
+  },
+  {
+   "line": 7,
+   "said": "За, ойлгосон. Түр хүлээж байгаарай.",
+   "heard": " Даавал алсан түр хүлээж байгаараа..",
+   "cer": 0.281,
+   "asr_secs": 2.1,
+   "signs": [
+    "huleeh"
+   ],
+   "text": [
+    "Даавал алсан"
+   ],
+   "signs_ok": false
+  },
+  {
+   "line": 8,
+   "said": "Эмч таныг удахгүй үзнэ, жаахан хүлээгээрэй.",
+   "heard": " имч таныг утасгүй үзэн жаахан хүлэгээрэй.",
+   "cer": 0.146,
+   "asr_secs": 2.3,
+   "signs": [
+    "emch",
+    "huleeh"
+   ],
+   "text": [],
+   "signs_ok": true
+  },
+  {
+   "line": 9,
+   "said": "Хүүхэд тань өвдөөд байна уу?",
+   "heard": " хүгэдтэн өбдөөд байна уу?",
+   "cer": 0.222,
+   "asr_secs": 2.2,
+   "signs": [
+    "huuhed",
+    "uvduh"
+   ],
+   "text": [
+    "хүгэдтэн",
+    "өбдөөд байна уу?"
+   ],
+   "signs_ok": true
+  },
+  {
+   "line": 10,
+   "said": "Та жирэмсэн үү?",
+   "heard": "",
+   "cer": 1.0,
+   "asr_secs": 1.9,
+   "signs": [],
+   "text": [],
+   "signs_ok": false
+  },
+  {
+   "line": 11,
+   "said": "Маш их баярлалаа, баяртай.",
+   "heard": " Машиг байриллаа, байртай.",
+   "cer": 0.25,
+   "asr_secs": 2.4,
+   "signs": [
+    "bayarlalaa",
+    "bayartai"
+   ],
+   "text": [],
+   "signs_ok": true
+  },
+  {
+   "line": 12,
+   "said": "Энэ маягтыг бөглөнө үү.",
+   "heard": "In myfte бүлгэнүү",
+   "cer": 0.727,
+   "asr_secs": 2.0,
+   "signs": [],
+   "text": [
+    "In myfte бүлгэнүү"
+   ],
+   "signs_ok": true
+  },
+  {
+   "line": 13,
+   "said": "Хоёрдугаар давхарт гарна уу.",
+   "heard": " хождоор тахорд гарна,",
+   "cer": 0.481,
+   "asr_secs": 1.9,
+   "signs": [],
+   "text": [
+    "хождоор тахорд гарна,"
+   ],
+   "signs_ok": true
+  },
+  {
+   "line": 14,
+   "said": "Уучлаарай, эмч одоогоор завгүй байна.",
+   "heard": " Училара эмжөөдөө ор завгүй байна.",
+   "cer": 0.314,
+   "asr_secs": 2.2,
+   "signs": [
+    "uuchlaarai",
+    "emch"
+   ],
+   "text": [
+    "ор",
+    "завгүй байна"
+   ],
+   "signs_ok": true
+  },
+  {
+   "line": 15,
+   "said": "Хүлээх шаардлагагүй, шууд ороорой.",
+   "heard": " Үлээг шаардлага үшууд ороор",
+   "cer": 0.219,
+   "asr_secs": 2.1,
+   "signs": [],
+   "text": [
+    "Үлээг шаардлага үшууд ороор"
+   ],
+   "signs_ok": true
+  },
+  {
+   "line": 16,
+   "said": "Эм бүү уугаарай, эмчийг хүлээгээрэй.",
+   "heard": " имбуулгараа эмчиг үлэгээрээ",
+   "cer": 0.353,
+   "asr_secs": 2.4,
+   "signs": [
+    "emch",
+    "huleeh"
+   ],
+   "text": [
+    "имбуулгараа"
+   ],
+   "signs_ok": true
+  }
+ ]
+}

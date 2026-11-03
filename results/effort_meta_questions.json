@@ -1,0 +1,483 @@
+{
+ "model": "muse-spark-1.3",
+ "rows": [
+  {
+   "effort": "minimal",
+   "rep": 1,
+   "passed": 16,
+   "found": 22,
+   "total": 22,
+   "clean": 16,
+   "text_ok": 16,
+   "verified": 16,
+   "n": 16,
+   "retries": 0,
+   "total_secs": 53.2,
+   "median_line_secs": 2.95,
+   "max_line_secs": 6.1,
+   "calls": 32,
+   "completion_tokens": 8752,
+   "reasoning_tokens": 7953,
+   "lines": [
+    {
+     "sentence": "Сайн байна уу. Танд юу тохиолдов?",
+     "secs": 3.9,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "sain_baina_uu",
+      "yasan_be"
+     ],
+     "text": [],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Хаана нь өвдөж байна?",
+     "secs": 4.2,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "uvduh"
+     ],
+     "text": [
+      "Хаана нь өвдөж байна?"
+     ],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Ойлголоо. Эмчид үзүүлье. Түр хүлээнэ үү.",
+     "secs": 4.2,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "oilgoloo",
+      "emch",
+      "huleeh"
+     ],
+     "text": [
+      "үзүүлье"
+     ],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Баяртай, эрүүл болоорой.",
+     "secs": 2.7,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "bayartai"
+     ],
+     "text": [
+      "эрүүл болоорой"
+     ],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Юу болсон бэ?",
+     "secs": 2.7,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "text": [],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Яасан бэ?",
+     "secs": 2.4,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "text": [],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "За, ойлгосон. Түр хүлээж байгаарай.",
+     "secs": 3.1,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "oilgoloo",
+      "huleeh"
+     ],
+     "text": [],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Эмч таныг удахгүй үзнэ, жаахан хүлээгээрэй.",
+     "secs": 6.1,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "emch",
+      "huleeh"
+     ],
+     "text": [
+      "удахгүй үзнэ"
+     ],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Хүүхэд тань өвдөөд байна уу?",
+     "secs": 3.4,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "huuhed",
+      "uvduh"
+     ],
+     "text": [
+      "Хүүхэд тань өвдөөд байна уу?"
+     ],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Та жирэмсэн үү?",
+     "secs": 2.0,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "jiremsen"
+     ],
+     "text": [
+      "Та жирэмсэн үү?"
+     ],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Маш их баярлалаа, баяртай.",
+     "secs": 2.8,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "bayarlalaa",
+      "bayartai"
+     ],
+     "text": [],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Энэ маягтыг бөглөнө үү.",
+     "secs": 2.5,
+     "attempts": 1,
+     "verified": true,
+     "signs": [],
+     "text": [
+      "Энэ маягтыг бөглөнө үү."
+     ],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Хоёрдугаар давхарт гарна уу.",
+     "secs": 2.5,
+     "attempts": 1,
+     "verified": true,
+     "signs": [],
+     "text": [
+      "Хоёрдугаар давхарт гарна уу"
+     ],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Уучлаарай, эмч одоогоор завгүй байна.",
+     "secs": 2.8,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "uuchlaarai",
+      "emch"
+     ],
+     "text": [
+      "одоогоор завгүй байна"
+     ],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Хүлээх шаардлагагүй, шууд ороорой.",
+     "secs": 4.3,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "huleeh"
+     ],
+     "text": [
+      "шаардлагагүй, шууд ороорой"
+     ],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Эм бүү уугаарай, эмчийг хүлээгээрэй.",
+     "secs": 3.6,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "emch",
+      "huleeh"
+     ],
+     "text": [
+      "Эм бүү уугаарай"
+     ],
+     "extra": [],
+     "passed": true
+    }
+   ]
+  },
+  {
+   "effort": "minimal",
+   "rep": 2,
+   "passed": 16,
+   "found": 22,
+   "total": 22,
+   "clean": 16,
+   "text_ok": 16,
+   "verified": 16,
+   "n": 16,
+   "retries": 1,
+   "total_secs": 51.1,
+   "median_line_secs": 2.8,
+   "max_line_secs": 7.2,
+   "calls": 34,
+   "completion_tokens": 9052,
+   "reasoning_tokens": 8171,
+   "lines": [
+    {
+     "sentence": "Сайн байна уу. Танд юу тохиолдов?",
+     "secs": 2.5,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "sain_baina_uu",
+      "yasan_be"
+     ],
+     "text": [],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Хаана нь өвдөж байна?",
+     "secs": 2.9,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "uvduh"
+     ],
+     "text": [
+      "Хаана нь өвдөж байна?"
+     ],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Ойлголоо. Эмчид үзүүлье. Түр хүлээнэ үү.",
+     "secs": 5.1,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "oilgoloo",
+      "emch",
+      "huleeh"
+     ],
+     "text": [
+      "үзүүлье"
+     ],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Баяртай, эрүүл болоорой.",
+     "secs": 2.9,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "bayartai"
+     ],
+     "text": [
+      "эрүүл болоорой"
+     ],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Юу болсон бэ?",
+     "secs": 2.3,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "text": [],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Яасан бэ?",
+     "secs": 2.0,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "yasan_be"
+     ],
+     "text": [],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "За, ойлгосон. Түр хүлээж байгаарай.",
+     "secs": 2.6,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "oilgoloo",
+      "huleeh"
+     ],
+     "text": [],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Эмч таныг удахгүй үзнэ, жаахан хүлээгээрэй.",
+     "secs": 7.2,
+     "attempts": 2,
+     "verified": true,
+     "signs": [
+      "emch",
+      "huleeh"
+     ],
+     "text": [
+      "таныг удахгүй үзнэ"
+     ],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Хүүхэд тань өвдөөд байна уу?",
+     "secs": 3.3,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "huuhed",
+      "uvduh"
+     ],
+     "text": [
+      "Хүүхэд тань өвдөөд байна уу?"
+     ],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Та жирэмсэн үү?",
+     "secs": 2.0,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "jiremsen"
+     ],
+     "text": [
+      "Та жирэмсэн үү?"
+     ],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Маш их баярлалаа, баяртай.",
+     "secs": 3.0,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "bayarlalaa",
+      "bayartai"
+     ],
+     "text": [],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Энэ маягтыг бөглөнө үү.",
+     "secs": 2.9,
+     "attempts": 1,
+     "verified": true,
+     "signs": [],
+     "text": [
+      "Энэ маягтыг бөглөнө үү."
+     ],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Хоёрдугаар давхарт гарна уу.",
+     "secs": 2.5,
+     "attempts": 1,
+     "verified": true,
+     "signs": [],
+     "text": [
+      "Хоёрдугаар давхарт гарна уу."
+     ],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Уучлаарай, эмч одоогоор завгүй байна.",
+     "secs": 2.7,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "uuchlaarai",
+      "emch"
+     ],
+     "text": [
+      "одоогоор завгүй байна"
+     ],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Хүлээх шаардлагагүй, шууд ороорой.",
+     "secs": 4.7,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "huleeh"
+     ],
+     "text": [
+      "шаардлагагүй, шууд ороорой"
+     ],
+     "extra": [],
+     "passed": true
+    },
+    {
+     "sentence": "Эм бүү уугаарай, эмчийг хүлээгээрэй.",
+     "secs": 2.3,
+     "attempts": 1,
+     "verified": true,
+     "signs": [
+      "emch",
+      "huleeh"
+     ],
+     "text": [
+      "эм бүү уугаарай"
+     ],
+     "extra": [],
+     "passed": true
+    }
+   ]
+  }
+ ]
+}

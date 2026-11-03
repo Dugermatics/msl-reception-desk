@@ -1,0 +1,23 @@
+{
+  "_note": "Signs the avatar can play (staff -> patient). Ids are the avatar clip labels (frontend/js/app.js CLIP_COUNTS). 'ready' = avatar clip exists; 'planned' = being recorded for the hospital demo. The patient-side recognizer has its own label list and is not used by glossmap.",
+  "signs": [
+    {"id": "sain_baina_uu", "mn": "сайн байна уу", "en": "hello", "status": "ready"},
+    {"id": "bayarlalaa", "mn": "баярлалаа", "en": "thank you", "status": "ready"},
+    {"id": "bayartai", "mn": "баяртай", "en": "goodbye", "status": "ready"},
+    {"id": "uuchlaarai", "mn": "уучлаарай", "en": "sorry / excuse me", "status": "ready"},
+    {"id": "yasan_be", "mn": "яасан бэ", "en": "what happened", "status": "ready"},
+    {"id": "huuhed", "mn": "хүүхэд", "en": "child", "status": "ready"},
+    {"id": "huuhduud", "mn": "хүүхдүүд", "en": "children", "status": "ready"},
+    {"id": "sonsgolgui", "mn": "сонсголгүй", "en": "deaf", "status": "ready"},
+    {"id": "sul_sonsgoltoi", "mn": "сул сонсголтой", "en": "hard of hearing", "status": "ready"},
+    {"id": "haraagui", "mn": "хараагүй", "en": "blind", "status": "ready"},
+    {"id": "autism", "mn": "аутизм", "en": "autism", "status": "ready"},
+    {"id": "jiremsen", "mn": "жирэмсэн", "en": "pregnant", "status": "ready"},
+    {"id": "nasand_huregch", "mn": "насанд хүрэгч", "en": "adult", "status": "ready"},
+
+    {"id": "uvduh", "mn": "өвдөх", "en": "hurt / be ill", "status": "ready"},
+    {"id": "oilgoloo", "mn": "ойлголоо", "en": "understood / got it", "status": "ready"},
+    {"id": "emch", "mn": "эмч", "en": "doctor", "status": "ready"},
+    {"id": "huleeh", "mn": "хүлээх", "en": "wait", "status": "ready"}
+  ]
+}

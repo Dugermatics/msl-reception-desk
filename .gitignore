@@ -1,0 +1,39 @@
+# Dataset, recordings and trained models are not part of this repository.
+data/
+datasets/
+*.mp4
+*.mov
+*.MOV
+*.pkl
+*.task
+*.glb
+*.csv
+keypoints*
+models/
+checkpoints/
+
+# Secrets
+.env
+*.key
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Recognizer debug dumps / models
+*.h5
+*.npz
+*.avi
+tmp/
+
+# Demo session logs (text + timings only)
+logs/
