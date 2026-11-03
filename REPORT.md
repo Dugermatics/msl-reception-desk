@@ -8,10 +8,22 @@ Real end-to-end runs of the demo dialogue (`docs/demo_script.md`, 10 lines) thro
 |---|---|---|
 | Staff → patient | browser mic → Speechmatics RT (server-side key) → `glossmap.py` (Muse Spark + rule and meaning checks) → playable-sign gate (vocabulary ∩ avatar `clip_allowlist.json`) → avatar `playSequence` | working, tested with a real browser mic (Chrome fake-audio device) and in 3 full runs |
 | Fallbacks | Web Speech `mn-MN`; typed input; text-only when the model fails or a sign is unsupported | working (unit tests + ASR-down test) |
-| Patient → staff | webcam → recognizer v5 (local, closed 9-sign vocabulary) → confidence gate (≥ 0.5) → `sign2text.py` (Muse Spark + deterministic no-added-content check) → staff screen | working, 3 full runs on a held-out rehearsal |
+| Patient → staff | webcam → recognizer v8 (local, closed 9-sign vocabulary) → confidence gate (≥ 0.5) → `sign2text.py` (Muse Spark + deterministic no-added-content check) → staff screen | working, 3 full runs on a held-out rehearsal |
 | Speech output | browser Mongolian voice only if installed | none installed on this PC: text only |
 
-The avatar animation is the frozen RC3 (`avatar-rc3` + the clip allow-list commit). The demo page embeds it unchanged and drives it through `window.signAvatar`.
+The avatar animation is the frozen RC3 (`avatar-rc3` + the clip allow-list commit); `avatar-rc4` (11-03) changes only the mesh (piercings removed), not the motion. The demo page embeds it unchanged and drives it through `window.signAvatar`.
+
+## Update 2026-11-03 (afternoon): video demo player, avatar mesh, training summary
+
+**Video demo player** (`/?staffplay=1`, enabled only when the server has `STAFF_AUDIO_DIR`)
+- The demo has one person, the developer, who signs the patient side live. The staff side uses the developer's own recorded staff lines.
+- Keys 1–4 play a recorded line through the speakers and stream the same audio in real time (100 ms chunks, silence in between) into the page's live Speechmatics session, the same path the end-to-end tests use. Transcription, sign mapping, both checks and the avatar run live; no transcript, gloss or result is prepared in advance.
+- The page shows "Staff speech: pre-recorded audio · Live AI processing" while this mode is on. The microphone button is hidden in this mode; without `?staffplay=1` the page is unchanged.
+- Check in a headless browser (keys 1–4, real model calls): 4/4 staff lines gave the expected signs and passed both checks on the first attempt; end of speech → avatar 3.4 s on line 10. `tests/e2e/states.js` still passes 17/17.
+
+**Avatar mesh (`avatar-rc4`, private prototype).** The ear rings (3 upper, 2 lobe) and the nose ring were removed from the avatar mesh. The motion is unchanged: avatar checks 24/24 on the demo clips and 270/288 on every clip, the same as RC3.
+
+**Recognizer training during the event (private prototype).** 8 training iterations of the same small LSTM on a local CPU, about 119,000 steps and about 1 hour of training in total (the logs of 3 early retrains on 10-31 were overwritten, so the true total is slightly higher). Each round added data: new demo signs, webcam recordings, seated recordings of the demo signer, and in v8 framing augmentation. The Meta models were not fine-tuned; they are used through their APIs.
 
 ## Update 2026-11-03: recognizer v8, line 6 reworded, final end-to-end runs
 
@@ -191,7 +203,7 @@ No page errors in any run. All 15 staff sentences (12 spoken + 3 replays) produc
 
 - Staff speech → avatar for all 5 scripted staff lines, plus replay, with on-screen text for unsigned parts ("Хаана", "Эрүүл болоорой").
 - Patient signs → staff text for all 5 patient lines when the recognizer is confident (run 1: 5/5).
-- On-screen labels for the video: "Muse Spark Open (open weights) on Baseten", "ASR: Speechmatics (mn)", "Recognizer v5".
+- On-screen labels for the video: "Muse Spark Open (open weights) on Baseten", "ASR: Speechmatics (mn)", "Recognizer v8", and in the video "Staff speech: pre-recorded audio · Live AI processing".
 - Safe behaviour on screen: uncertain signs in amber with "please repeat", unsupported signs struck through and never played, model failure → text only.
 
 ## Remaining limitations (11-03)
