@@ -7,6 +7,8 @@ A two-way communication assistant between a Deaf person who uses **Mongolian Sig
 
 Built by Dugermatics LLC for the **Meta Global AI Developer Hackathon 2026** (Startup Track, theme "Build for your world").
 
+**Demo video (3 min):** https://youtu.be/KnU7ikl6VDM
+
 > **Scope: communication access only.** The system never diagnoses, triages or gives medical advice. It only relays what the two people say. The avatar signs only what the staff member said, and the patient's text contains only what was signed.
 
 ## What is pre-existing and what was built during the hackathon
